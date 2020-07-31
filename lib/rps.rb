@@ -1,3 +1,6 @@
+@player_score = 0
+@computer_score = 0
+
 def play_game
     puts "Let's play a game of rock paper scissors!"
 
@@ -30,23 +33,21 @@ def play_game
     puts "Computer chose #{@computer_choice}!"
 
     def results
-        player_score = 0
-        computer_score = 0
 
         if @player_choice === @computer_choice
-            puts "It's a DRAW! No one wins. The score is YOU: #{player_score} / COMPUTER: #{computer_score}"
+            puts "It's a DRAW! No one wins. The score is YOU: #{@player_score} / COMPUTER: #{@computer_score}"
 
             play_game
         elsif @player_choice == 'rock' && @computer_choice == 'scissors' || 
               @player_choice == 'paper' && @computer_choice == 'rock' || 
               @player_choice == 'scissors' && @computer_choice == 'rock'
-              
-            puts "You WIN! The score is YOU: #{player_score} / COMPUTER: #{computer_score}"
-            player_score += 1
+            
+            @player_score += 1
+            puts "You WIN! The score is YOU: #{@player_score} / COMPUTER: #{@computer_score}"
             play_game
         else
-            puts "You LOOSE! The score is YOU: #{player_score} / COMPUTER: #{computer_score}"
-            computer_score += 1
+            @computer_score += 1
+            puts "You LOOSE! The score is YOU: #{@player_score} / COMPUTER: #{@computer_score}"
             play_game
         end
     end
