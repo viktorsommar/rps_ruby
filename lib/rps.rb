@@ -4,6 +4,11 @@ def play_game
     def player_choice
         print "Make your choice: rock, paper or scissors? "
         @player_choice = gets.chomp.downcase
+
+        until @player_choice == 'rock' || @player_choice == 'paper' || @player_choice == 'scissors' do
+            print "That's a silly choice. Choose again! "
+            @player_choice = gets.chomp.downcase
+        end
     end
     
     player_choice
