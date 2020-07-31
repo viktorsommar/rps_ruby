@@ -28,6 +28,21 @@ def play_game
 
     computer_choice
     puts "Computer chose #{@computer_choice}!"
+
+    def results
+        if @player_choice === @computer_choice
+            puts "It's a DRAW! No one wins."
+            play_game
+        elsif @player_choice == 'rock' && @computer_choice == 'scissors' || @player_choice == 'paper' && @computer_choice == 'rock' || @player_choice == 'scissors' && @computer_choice == 'rock'
+            puts "You WIN!"
+            play_game
+        else
+            puts "You LOOSE!"
+            play_game
+        end
+    end
+
+    results
 end
 
 play_game
