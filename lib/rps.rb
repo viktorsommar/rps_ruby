@@ -10,7 +10,7 @@ def play_game
     puts "You choose #{@player_choice}."
 
     def computer_choice
-        @compouter_choice = rand(1..3)
+        @computer_choice = rand(1..3)
 
         if @computer_choice == 1
             @computer_choice = "rock"
