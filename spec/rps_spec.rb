@@ -1,9 +1,9 @@
-require './lib/rps.rb'
+RSpec.describe 'game can be played' do
+  player_choice = 'rock'
 
-describe 'player can choose rock paper scissors' do
-  let(@player_choice = 'rock')
+  subject { player_choice }
 
   it 'player can choose rock' do
-    expect(@player_choice).to eq "rock"
+    expect(subject).to eq "rock"
   end
 end
