@@ -1,6 +1,8 @@
 require './lib/rps.rb'
-describe Rps do
-  it 'user can choose a weapon' do
-    expect(player.choice).to eq 'Rock'
+
+describe 'player can choose rock paper scissors' do
+
+  it 'player can choose rock' do
+    expect(@input).to eq "rock"
   end
 end
